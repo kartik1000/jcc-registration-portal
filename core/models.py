@@ -13,13 +13,13 @@ class Team(models.Model, Importable):
         max_length=255, default="No Player Assigned")
     player_one_email = models.EmailField(
         max_length=255, default="No Email Provided")
-    player_one_contact = PhoneNumberField(null=False, blank=False, unique=True)
+    player_one_contact = PhoneNumberField(null=True, blank=True, unique=True)
     player_one_hall = models.CharField(max_length=255, blank=True, null=True)
     player_two_name = models.CharField(
         max_length=255, default="No Player Assigned")
     player_two_email = models.EmailField(
         max_length=255, default="No Email Provided")
-    player_two_contact = PhoneNumberField(null=False, blank=False, unique=True)
+    player_two_contact = PhoneNumberField(null=True, blank=True, unique=True)
     player_two_hall = models.CharField(max_length=255, blank=True, null=True)
     timestamp = models.DateTimeField(default=timezone.now)
     unique_team_id = models.CharField(max_length=255, blank=True, null=True)
