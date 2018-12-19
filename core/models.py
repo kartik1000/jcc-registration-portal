@@ -5,7 +5,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 import uuid
 
 
-class Team(models.Model, Importable):
+class Team(models.Model):
     team_id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False)
     team_name = models.CharField(max_length=255, blank=True, null=True)
